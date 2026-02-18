@@ -1,0 +1,353 @@
+.attendance-page {
+  background: var(--bg-light);
+  min-height: calc(100vh - 200px);
+  padding: 32px 0;
+}
+
+.attendance-page h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  color: var(--text-dark);
+}
+
+.attendance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.attendance-header h1 {
+  margin-bottom: 0;
+}
+
+.course-selector {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-selector h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+
+.course-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.course-btn {
+  padding: 16px;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.course-btn span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.course-btn:hover {
+  border-color: var(--primary-color);
+  background: var(--bg-light);
+}
+
+.course-btn.active {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.course-btn.active span {
+  color: white;
+  opacity: 0.9;
+}
+
+.attendance-summary {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-header h2 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: var(--text-dark);
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-value.success {
+  color: var(--success);
+}
+
+.stat-value.danger {
+  color: var(--danger);
+}
+
+.stat-value.excellent,
+.stat-value.good {
+  color: var(--success);
+}
+
+.stat-value.warning {
+  color: var(--warning);
+}
+
+.progress-section {
+  margin-top: 24px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.progress-text {
+  color: var(--primary-color);
+}
+
+.progress-bar {
+  height: 24px;
+  background: #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.progress-fill.excellent,
+.progress-fill.good {
+  background: linear-gradient(90deg, var(--success) 0%, #34d399 100%);
+}
+
+.progress-fill.warning {
+  background: linear-gradient(90deg, var(--warning) 0%, #fbbf24 100%);
+}
+
+.progress-fill.danger {
+  background: linear-gradient(90deg, var(--danger) 0%, #f87171 100%);
+}
+
+.progress-info {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.success-message {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.warning-message {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.recent-attendance {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-attendance h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.attendance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.attendance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+}
+
+.attendance-item.present {
+  border-left-color: var(--success);
+}
+
+.attendance-item.absent {
+  border-left-color: var(--danger);
+}
+
+.attendance-date {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.date-icon {
+  font-size: 20px;
+}
+
+.attendance-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit-small,
+.btn-delete-small {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+.btn-edit-small {
+  background: var(--primary-color);
+  color: white;
+}
+
+.btn-edit-small:hover {
+  background: var(--secondary-color);
+}
+
+.btn-delete-small {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-delete-small:hover {
+  background: #dc2626;
+}
+
+.no-attendance {
+  text-align: center;
+  color: var(--text-light);
+  padding: 20px;
+  font-style: italic;
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.status-badge.present {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.absent {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.attendance-tips {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-tips h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+
+.attendance-tips ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attendance-tips li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-dark);
+}
+
+.attendance-tips li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--warning);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .course-buttons {
+    grid-template-columns: 1fr;
+  }
+}

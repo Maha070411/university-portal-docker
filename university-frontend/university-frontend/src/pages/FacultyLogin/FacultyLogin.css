@@ -1,0 +1,262 @@
+.faculty-login {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.faculty-login .login-left {
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+}
+
+/* Reuse all other styles from StudentLogin.css */
+.faculty-login .login-container {
+  max-width: 1000px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  min-height: 600px;
+}
+
+.faculty-login .login-left {
+  flex: 1;
+  color: white;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.faculty-login .login-illustration {
+  text-align: center;
+}
+
+.faculty-login .illustration-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.faculty-login .login-left h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.faculty-login .login-left p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.faculty-login .features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.faculty-login .feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 16px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.faculty-login .feature-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.faculty-login .feature-icon {
+  font-size: 24px;
+}
+
+.faculty-login .login-right {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-login .login-form-wrapper {
+  width: 100%;
+  max-width: 400px;
+}
+
+.faculty-login .login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faculty-login .login-header h1 {
+  font-size: 32px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.faculty-login .login-header p {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.faculty-login .login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faculty-login .login-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faculty-login .login-form label {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.faculty-login .login-form input {
+  padding: 14px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.faculty-login .login-form input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.faculty-login .error-message {
+  padding: 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.faculty-login .form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.faculty-login .remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.faculty-login .remember-me input {
+  cursor: pointer;
+}
+
+.faculty-login .forgot-password {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faculty-login .forgot-password:hover {
+  color: var(--secondary-color);
+}
+
+.faculty-login .btn-login {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faculty-login .login-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.faculty-login .login-footer p {
+  margin: 8px 0;
+}
+
+.faculty-login .login-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faculty-login .login-footer a:hover {
+  color: var(--secondary-color);
+}
+
+.faculty-login .demo-credentials {
+  margin-top: 30px;
+  padding: 16px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+}
+
+.faculty-login .demo-credentials p {
+  margin: 4px 0;
+  color: var(--text-dark);
+}
+
+.faculty-login .demo-credentials strong {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .faculty-login .login-container {
+    flex-direction: column;
+  }
+
+  .faculty-login .login-left {
+    padding: 40px 30px;
+  }
+
+  .faculty-login .login-right {
+    padding: 40px 30px;
+  }
+
+  .faculty-login .login-left h2 {
+    font-size: 24px;
+  }
+
+  .faculty-login .illustration-icon {
+    font-size: 60px;
+  }
+}
