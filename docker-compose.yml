@@ -1,0 +1,42 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: hackathonup
+      MYSQL_ROOT_PASSWORD: Maha0711@
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  backend:
+    build:
+      context: ./HackathonUP
+      dockerfile: Dockerfile
+    container_name: backend-app
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/hackathonup
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=Maha0711@
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  frontend:
+    build:
+      context: ./university-frontend/university-frontend
+      dockerfile: Dockerfile
+    container_name: frontend-app
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "8082:80"
+
+volumes:
+  mysql-data:
